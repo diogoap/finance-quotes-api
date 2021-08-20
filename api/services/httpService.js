@@ -24,10 +24,10 @@ var getHttpDataInvesting = function (ticker, callbackSuccess, callbackError) {
         res.text().then((body) => {
           console.log(`** OK ** - getHttpDataInvesting - Loaded for ${ticker} - URL: ${url}`);
           const $ = cheerio.load(body);
-          var priceText = $('#last_last').text();
+          var priceText = $('.lastInst').text().trim();
 
           if (priceText.length == 0) {
-            console.log(`Cannot find price for ${ticker} with <#last_last> selector. Trying with <instrument-price-last>`);
+            console.log(`Cannot find price for ${ticker} with <.lastInst> selector. Trying with <instrument-price-last>`);
 
             priceText = $('[data-test="instrument-price-last"]').text();
 
