@@ -2,11 +2,11 @@
 
 This is a simple scraper tool which provides a wrapper api to read stock quotes from investing.com.
 
-It can return data both in JSON and CSV formats.
+It can returns data both in JSON and CSV formats.
 
-Docker file is available for quick deployment.
+Docker file is available for quick deployments.
 
-To run it locally just type node server.js
+To run it locally just type node `server.js`
 
 Request example:
 
